@@ -14,7 +14,7 @@ int main(int argc __attribute__((unused)), char **argv)
 
 		_getline(appData);
 
-		appData->history = _strtow(appData->buffer, 
+		appData->history = _strtow(appData->buffer,
 				COMMAND_SEPARATOR, ESCAPE_SEPARATOR);
 
 		if (appData->history == NULL)
@@ -26,7 +26,7 @@ int main(int argc __attribute__((unused)), char **argv)
 
 		for (cLoop = 0; appData->history[cLoop] != NULL; cLoop++)
 		{
-			appData->arguments = _strtow(appData->history[cLoop], 
+			appData->arguments = _strtow(appData->history[cLoop],
 					SEPARATORS, ESCAPE_SEPARATOR);
 
 			if (appData->arguments == NULL)
